@@ -1,7 +1,9 @@
-const TeamMembers = ({ employees, handleEmployeeCardClick, SelectedTeams }) => {
+import TeamMemberCard from './TeamMemberCard.jsx';
+
+const TeamMembers = ({ employees, handleEmployeeCardClick, selectedTeam }) => {
   return (
     employees.map((employee) => {
-      <TeamMemberCard handleEmployeeCardClick={handleEmployeeCardClick} selectedTeam={selectedTeam} />
+      <TeamMemberCard employee={employee} handleEmployeeCardClick={handleEmployeeCardClick} selectedTeam={selectedTeam} />
     })
   )
 }
